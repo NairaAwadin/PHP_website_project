@@ -1,0 +1,71 @@
+/*-- SCROLLBAR ----------------------------------------------------------------------------- */
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.01);
+  }
+/*-- SCROLLBAR ------------------------------------------------------------------------------*/
+
+/*----------*/
+
+/*-- BASE -----------------------------------------------------------------------------------*/
+*,
+::before,
+::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Prompt', Arial, Helvetica, sans-serif;
+  font-weight: 800;
+}
+/*-- BASE -----------------------------------------------------------------------------------*/
+
+/*----------*/
+
+/*-- HEADER ---------------------------------------------------------------------------------*/
+header{
+    background-color: orange;
+    padding: 1rem;
+}
+/*-- HEADER ---------------------------------------------------------------------------------*/
+
+/*----------*/
+
+/*-- BODY -----------------------------------------------------------------------------------*/
+nav{
+    background-color: burlywood;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+}
+
+main{
+  background-color: greenyellow;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+/*-- BODY -----------------------------------------------------------------------------------*/
+
+/*----------*/
+
+/*-- FOOTER ---------------------------------------------------------------------------------*/
+footer{
+    background-color: orange;
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+}
+/*-- FOOTER ---------------------------------------------------------------------------------*/
