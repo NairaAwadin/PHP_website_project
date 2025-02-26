@@ -6,3 +6,6 @@ Ce projet collaboratif nous invite à concevoir et développer un site web dynam
 # php -S localhost:5500
 # [ADD][MODIF][SUPP]
 # docker compose up
+
+
+sudo systemctl status mariadb  #pour vérifier si MariaDB

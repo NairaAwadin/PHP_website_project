@@ -7,5 +7,6 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ea consectetur molestiae error, recusandae, doloremque maxime, rem ex repellendus eum dolor. Dicta deserunt quaerat illum fugit, cum non commodi deleniti.
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus cumque minus quo molestiae vel iste cupiditate impedit porro fuga commodi error reprehenderit fugiat in non, obcaecati magnam ad repudiandae quaerat?
         </p>
+        <a href="views/login.php">login</a>
         <a href="register.php">register</a>
     </main>

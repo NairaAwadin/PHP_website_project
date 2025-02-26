@@ -134,7 +134,7 @@ function actionRegister()
     require_once "./views/security/index.php";
 }
 
-function actionLogout()
+/*function actionLogout()
 {
     session_destroy();
 }
@@ -160,7 +160,7 @@ function actionLogin()
     }
 
     require_once "./views/security/index.php";
-}
+}*/
 
 function protectedRoute(Closure $closure, $roles = ['USER'])
 {

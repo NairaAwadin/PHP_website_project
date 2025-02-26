@@ -32,7 +32,7 @@ $products = [
 
 
 function createProduct(&$products, $product) {
-    
+
     $product['id'] = uniqid();
     array_push($products, $product);
 
