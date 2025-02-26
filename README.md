@@ -8,4 +8,20 @@ Ce projet collaboratif nous invite à concevoir et développer un site web dynam
 # docker compose up
 
 
-sudo systemctl status mariadb  #pour vérifier si MariaDB
+sudo systemctl status mariadb  #pour vérifier si MariaDB est en cours d'execution
+
+sudo systemctl start mariadb  #pour le démarrer
+
+sudo systemctl enable mariadb  #pour que mariadb démarre automatiquement
+
+mysql -u root -p  #pour se connecter à mariadb et acceder à app
+mdp = root
+
+SHOW DATABASES;  #voir les bases de données dispos
+
+USE nom_bd; (ex: app)  # utiliser une base de données spécifique
+
+SHOW TABLES;  #afficher les tables de la bd
+
+
+
