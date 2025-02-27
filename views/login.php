@@ -5,7 +5,7 @@ if (isset($error)) {
 ?>
 
 <h2>Connexion</h2>
-<form method="POST" action="../controllers/loginControllers.php">
+<form method="POST" action="../controllers/login.php">
     <label for="email">Email</label>
     <input type="email" name="email" id="email" required>
     <br>

@@ -1,6 +1,5 @@
 <?php
 session_start();
-require_once "../config/db.php";
 require_once "../models/user.php";
 
 function handle_login($pdo)

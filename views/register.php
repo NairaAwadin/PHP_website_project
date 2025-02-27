@@ -1,5 +1,5 @@
 <main>
-    <form method="post" action="confirmation.php">
+    <form method="post" action="../controllers/register.php">
         <h1>Inscription</h1>
         <div>
             <label for="civilite">Nom<span class="rouge">*</span></label>
@@ -16,16 +16,12 @@
             <input type="radio" value="3" name="sexe" required> Autre
         </div>
         <div>
-            <label for="mail">E-mail<span class="rouge">*</span></label>
-            <input type="email" name="mail" id="mail" required placeholder="exemple@messagerie.com">
+            <label for="email">E-mail<span class="rouge">*</span></label>
+            <input type="email" name="email" id="email" required placeholder="exemple@messagerie.com">
         </div>
         <div>
             <label for="password">Password<span class="rouge">*</span></label>
             <input type="password" name="password" id="password" required placeholder="Mot de passe">
-        </div>
-        <div>
-            <label for="password2">Repeat Password<span class="rouge">*</span></label>
-            <input type="password2" name="password2" id="password2" required placeholder="Répétez le mot de passe">
         </div>
         
         <div>
