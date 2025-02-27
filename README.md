@@ -23,5 +23,16 @@ USE nom_bd; (ex: app)  # utiliser une base de données spécifique
 
 SHOW TABLES;  #afficher les tables de la bd
 
+docker compose up
 
+docker exec -it php_website_project-db-1 mysql -u root -p -h 127.0.0.1 -P 3306
 
+CREATE TABLE IF NOT EXISTS users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nom VARCHAR(50) NOT NULL,
+    prenom VARCHAR(50) NOT NULL,
+    sexe ENUM('H', 'F', 'A') NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

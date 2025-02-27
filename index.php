@@ -38,32 +38,20 @@ function profil()
     require_once BASE_PATH . "/layouts/footer.php";
 }
 
-function confirmation()
-{
-    $pageTitle = "Confirmation";
-    require_once BASE_PATH . "/layouts/head.php";
-    require_once BASE_PATH . "/layouts/header.php";
-    require_once BASE_PATH . "/views/confirmation.php";
-    require_once BASE_PATH . "/layouts/footer.php";
-}
-
 $action = $_SERVER['REQUEST_URI'];
 // var_dump($action);
 switch (substr(strtok($action, '?'), 1)) {
     case "":
         index();
         break;
-    case "profil.php":
+    case "profil":
         profil();
         break;
-    case "login.php":
+    case "login":
         login();
         break;
-    case "register.php":
+    case "register":
         register();
-        break;
-    case "confirmation.php":
-        confirmation();
         break;
     default:
         echo "404 - Page not found";
