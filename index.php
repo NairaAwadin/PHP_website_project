@@ -17,6 +17,7 @@ function register()
 {
     $pageTitle = "Register";
     require_once BASE_PATH . "/layouts/head.php";
+    require_once BASE_PATH . "/layouts/header.php";
     require_once BASE_PATH . "/views/register.php";
     require_once BASE_PATH . "/layouts/footer.php";
 }
@@ -25,6 +26,7 @@ function login()
 {
     $pageTitle = "Login";
     require_once BASE_PATH . "/layouts/head.php";
+    require_once BASE_PATH . "/layouts/header.php";
     require_once BASE_PATH . "/views/login.php";
     require_once BASE_PATH . "/layouts/footer.php";
 }
