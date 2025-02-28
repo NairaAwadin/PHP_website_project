@@ -23,6 +23,8 @@ USE nom_bd; (ex: app)  # utiliser une base de données spécifique
 
 SHOW TABLES;  #afficher les tables de la bd
 
+DROP TABLE user;  #pour supprimer une table
+
 docker compose up
 
 docker exec -it php_website_project-db-1 mysql -u root -p -h 127.0.0.1 -P 3306
@@ -36,3 +38,4 @@ CREATE TABLE IF NOT EXISTS users (
     password VARCHAR(255) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
