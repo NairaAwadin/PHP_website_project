@@ -1,12 +1,3 @@
-<!--<nav id="navbar">
-    <ul>
-        <li><a href="/">home</a></li>
-        <li><a href="/register">register</a></li>
-        <li><a href="/login">login</a></li>
-        <li><a href="/profil">profil</a></li>
-    </ul>
-</nav>-->
-
 <nav class="navbar p-2" style="background-color: #1A1A1A; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
     <div class="container-fluid d-flex align-items-center justify-content-between">
 
@@ -19,7 +10,7 @@
             <a href="/" class="nav_item">Accueil</a>
             <a href="/galerie" class="nav_item">Galerie</a>
             <a href="/profil" class="nav_item">Profil</a>
-            <a href="/register" class="btn btn-outline-light btn-sm rounded-pill px-3">Sign Up</a>
+            <!--<a href="/register" class="btn btn-outline-light btn-sm rounded-pill px-3">Sign Up</a>-->
             <a href="/login" class="btn btn-light btn-sm rounded-pill px-3">Log In</a>
         </div>
     </div>
