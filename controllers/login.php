@@ -13,7 +13,7 @@ function handle_login($pdo)
         if ($user && password_verify($password, $user["password"])) {
             $_SESSION["user_id"] = $user["id"];
             $_SESSION["email"] = $user["email"];
-            header("Location: ../views/profil.php");
+            header("Location: /profil");
             exit();
         } else {
             echo "Identifiants incorrects";
