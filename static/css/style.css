@@ -88,7 +88,7 @@ nav{
 
 .btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 6px rgba(91, 112, 231, 0.37);
+  box-shadow: #3B5998;
 }
 
 .navbar-toggler {
@@ -133,13 +133,34 @@ main {
 
 .artwork img {
   width: 100%;
-  height: 350px;
+  height: 450px;
   object-fit: cover;
   border-radius: 8px;
 }
 
 .join_us {
   box-shadow: 0 4px 6px rgba(91, 112, 231, 0.32);
+}
+
+/*--login-register-page--*/
+
+.btn_effect:hover {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.link_register {
+  color: var(--primary);
+}
+
+.register_img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 40%;
+  object-fit: cover;
+  object-position: right;
 }
 
 /*-- BODY -----------------------------------------------------------------------------------*/
