@@ -17,7 +17,7 @@
             Connu pour ses couleurs vives et ses émotions intenses, il a créé plus de 2 000 œuvres, dont des peintures,
             des dessins et des croquis. Explorez sa vie, ses œuvres et son héritage à travers notre site
         </p>
-        <a href="/galerie" class="btn btn-primary my-4">Voir la galerie</a>
+        <a href="/galerie" class="btn btn_effect my-4">Voir la galerie</a>
     </section>
 
     <section class="container my-5">
@@ -52,9 +52,9 @@
 
     <section class="py-5 text-center join_us">
         <div class="container">
-            <h2>Rejoignez-nous !</h2>
+            <h2 class="mb-4">Rejoignez-nous !</h2>
             <p>Inscrivez-vous pour accéder à des contenus exclusifs et participer à notre communauté</p>
-            <a href="/register" class="btn btn-primary">S'inscrire</a>
+            <a href="/register" class="btn btn_effect">S'inscrire</a>
             <!--<a href="/login" class="btn btn-outline-secondary">Se connecter</a>-->
         </div>
     </section>

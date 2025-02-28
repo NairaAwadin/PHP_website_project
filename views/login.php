@@ -29,7 +29,7 @@
                         </div>
 
                         <div class="pt-1 mb-4">
-                            <button class="btn btn_login btn-lg btn-block" type="submit">Se connecter</button>
+                            <button class="btn btn_effect" type="submit">Se connecter</button>
                         </div>
 
                         <p>Vous n'avez pas de compte ? <a href="/register" class="link_register">Inscrivez-vous ici</a></p>
@@ -38,8 +38,7 @@
             </div>
 
             <div class="col-sm-6 px-0 d-none d-sm-block">
-                <img src="/static/img/avenue_of_poplars.jpg" alt="login img"
-                    class="w-100 vh-100" style="object-fit: cover; object-position: center;">
+                <img src="/static/img/avenue_of_poplars.jpg" alt="login img" class="register_img">
             </div>
         </div>
     </div>
