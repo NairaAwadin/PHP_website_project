@@ -88,7 +88,7 @@ nav{
 
 .btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 6px rgba(91, 112, 231, 0.37);
+  box-shadow: #3B5998;
 }
 
 .navbar-toggler {
@@ -140,6 +140,17 @@ main {
 
 .join_us {
   box-shadow: 0 4px 6px rgba(91, 112, 231, 0.32);
+}
+
+/*--login-page--*/
+
+.btn_login:hover {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.link_register {
+  color: var(--primary);
 }
 
 /*-- BODY -----------------------------------------------------------------------------------*/

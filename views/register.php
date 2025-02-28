@@ -23,7 +23,7 @@
             <label for="password">Password<span class="rouge">*</span></label>
             <input type="password" name="password" id="password" required placeholder="Mot de passe">
         </div>
-        
+
         <div>
             <input type="reset" value="Effacer">
             <input type="submit" value="S'inscrire" class="animate__animated animate__pulse animate__infinite animate__slow">
