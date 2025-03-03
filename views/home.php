@@ -50,7 +50,7 @@
         </div>
     </section>
 
-    <section class="py-5 text-center join_us">
+    <section class="py-5 text-center">
         <div class="container">
             <h2 class="mb-4">Rejoignez-nous !</h2>
             <p>Inscrivez-vous pour accéder à des contenus exclusifs et participer à notre communauté</p>

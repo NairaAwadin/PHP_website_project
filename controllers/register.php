@@ -18,7 +18,7 @@ function handle_register($pdo)
             ]);
 
             if ($newUser) {
-                header("Location: ../views/login.php");
+                header("Location: /login");
                 exit();
             } else {
                 echo "Erreur lors de la création de l'utilisateur.";
