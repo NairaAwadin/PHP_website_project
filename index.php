@@ -40,6 +40,15 @@ function profil()
     require_once BASE_PATH . "/layouts/footer.php";
 }
 
+function galerie()
+{
+    $pageTitle = "Galerie";
+    require_once BASE_PATH . "/layouts/head.php";
+    require_once BASE_PATH . "/layouts/header.php";
+    require_once BASE_PATH . "/views/galerie.php";
+    require_once BASE_PATH . "/layouts/footer.php";
+}
+
 $action = $_SERVER['REQUEST_URI'];
 // var_dump($action);
 switch (substr(strtok($action, '?'), 1)) {
@@ -54,6 +63,9 @@ switch (substr(strtok($action, '?'), 1)) {
         break;
     case "register":
         register();
+        break;
+    case "galerie":
+        galerie();
         break;
     default:
         echo "404 - Page not found";
