@@ -14,9 +14,11 @@ Naira Awadin : Login, home, css (bootstrap) site entier, galerie (commentaires)
 
 -------------------------------------------------------------
 
-# docker compose up
+# docker compose up -d
 
 # docker exec -it php_website_project-db-1 mysql -u root -p -h 127.0.0.1 -P 3306
+
+# mdp : root
 
 # USE app;
 
