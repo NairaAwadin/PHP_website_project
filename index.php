@@ -68,5 +68,4 @@ switch (substr(strtok($action, '?'), 1)) {
         echo "404 - Page not found";
         break;
 }
-
 ?>

@@ -1,45 +1,12 @@
 <?php
 session_start();
 require_once BASE_PATH . '/config/db.php';
+require_once BASE_PATH . '/models/galerie.php';
 
-// Récupérer les œuvres d'art
-$artworks = [];
-try {
-    $stmt = $pdo->query("SELECT * FROM artworks");
-    $artworks = $stmt->fetchAll(PDO::FETCH_ASSOC);
-} catch (PDOException $e) {
-    echo "Erreur : " . $e->getMessage();
-}
-
-// Récupérer les commentaires pour chaque œuvre d'art
-$comments = [];
-try {
-    $stmt = $pdo->query("SELECT comments.*, users.nom, users.prenom FROM comments JOIN users ON comments.user_id = users.id");
-    $comments = $stmt->fetchAll(PDO::FETCH_ASSOC);
-} catch (PDOException $e) {
-    echo "Erreur : " . $e->getMessage();
-}
-
-// Récupérer les expositions pour chaque œuvre d'art
-$exhibitions = [];
-try {
-    $stmt = $pdo->query("SELECT * FROM exhibitions");
-    $exhibitions = $stmt->fetchAll(PDO::FETCH_ASSOC);
-} catch (PDOException $e) {
-    echo "Erreur : " . $e->getMessage();
-}
-
-// Récupérer les favoris pour chaque utilisateur
-$favorites = [];
-if (isset($_SESSION['user_id'])) {
-    try {
-        $stmt = $pdo->prepare("SELECT artwork_id FROM favorites WHERE user_id = :user_id");
-        $stmt->execute(['user_id' => $_SESSION['user_id']]);
-        $favorites = $stmt->fetchAll(PDO::FETCH_COLUMN, 0);
-    } catch (PDOException $e) {
-        echo "Erreur : " . $e->getMessage();
-    }
-}
+$artworks = get_artworks($pdo);
+$comments = get_comments($pdo);
+$exhibitions = get_exhibitions($pdo);
+$favorites = isset($_SESSION['user_id']) ? get_user_favorites($pdo, $_SESSION['user_id']) : [];
 ?>
 
 <main>
@@ -80,11 +47,11 @@ if (isset($_SESSION['user_id'])) {
                                             <div class="form-group">
                                                 <textarea name="comment" class="form-control" placeholder="Ajouter un commentaire..." required></textarea>
                                             </div>
-                                            <button type="submit" class="btn btn_effect">Poster</button>
+                                            <button type="submit" class="btn btn_effect" style="margin-top: 10px;">Poster</button>
                                         </form>
                                     <?php endif; ?>
 
-                                    <!-- Affiche les coms -->
+                                    <!--affiche les coms-->
                                     <?php
                                     $hasComments = false;
                                     foreach ($comments as $comment):

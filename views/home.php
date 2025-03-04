@@ -55,7 +55,6 @@
             <h2 class="mb-4">Rejoignez-nous !</h2>
             <p>Inscrivez-vous pour accéder à des contenus exclusifs et participer à notre communauté</p>
             <a href="/register" class="btn btn_effect">S'inscrire</a>
-            <!--<a href="/login" class="btn btn-outline-secondary">Se connecter</a>-->
         </div>
     </section>
 </main>

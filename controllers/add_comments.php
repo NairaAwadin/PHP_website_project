@@ -6,7 +6,8 @@ function add_comment(PDO $pdo, int $user_id, int $artwork_id, string $comment): 
 {
     if (!empty($comment)) {
         try {
-            $stmt = $pdo->prepare("INSERT INTO comments (user_id, artwork_id, comment) VALUES (:user_id, :artwork_id, :comment)");
+            $stmt = $pdo->prepare("INSERT INTO comments (user_id, artwork_id, comment)
+                VALUES (:user_id, :artwork_id, :comment)");
             $stmt->execute([
                 'user_id' => $user_id,
                 'artwork_id' => $artwork_id,

@@ -22,7 +22,7 @@ if (!isset($_SESSION["user_id"])) {
                             <div class="d-flex flex-column align-items-center text-center">
                                 <img src="../static/img/profil.png" alt="Admin" class="rounded-circle" width="150">
                                 <div class="mt-3">
-                                    <p>Vous êtes connecté.</p>
+                                    <p>Vous êtes connecté !</p>
                                     <h4><?= htmlspecialchars($_SESSION['prenom']) . " " . htmlspecialchars($_SESSION['nom']) ?></h4>
                                     <p class="text-secondary mb-1">
                                         <?php
@@ -35,7 +35,7 @@ if (!isset($_SESSION["user_id"])) {
                                         }
                                         ?>
                                     </p>
-                                    <a href='../controllers/logout.php'>Se déconnecter</a>
+                                    <a class="link_register" href='../controllers/logout.php'>Se déconnecter</a>
                                 </div>
                             </div>
                         </div>
@@ -83,7 +83,7 @@ if (!isset($_SESSION["user_id"])) {
                                 <hr>
                                 <div class="row">
                                     <div class="col-sm-12">
-                                        <button type="submit" class="btn btn-primary">Mettre à jour</button>
+                                        <button type="submit" class="btn btn_effect">Mettre à jour</button>
                                     </div>
                                 </div>
                             </form>
@@ -109,7 +109,7 @@ if (!isset($_SESSION["user_id"])) {
                                 <hr>
                                 <div class="row">
                                     <div class="col-sm-12">
-                                        <button type="submit" class="btn btn-primary">Mettre à jour</button>
+                                        <button type="submit" class="btn btn_effect">Mettre à jour</button>
                                     </div>
                                 </div>
                             </form>

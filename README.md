@@ -1,10 +1,35 @@
 # PHP_website_project
-Ce projet collaboratif nous invite à concevoir et développer un site web dynamique en PHP, en mettant en œuvre de nombreuses fonctionnalités modernes et en respectant les bonnes pratiques de développement. [ADD][MODIF][SUPP]
+
+Ce projet collaboratif nous invite à concevoir et développer un site web dynamique en PHP, en mettant en œuvre de nombreuses fonctionnalités modernes et en respectant les bonnes pratiques de développement. Notre site permet aux utilisateurs de découvrir des oeuvres d'art de Vincent Van Gogh, d'ajouter des oeuvres à leurs favoris, de laisser des commentaires, et bien plus encore prochainement !
+
+# Norme de commits
+
+[ADD][MODIF][SUPP]
 
 # MEMBRES DU GROUPE
 
 Romain Poisson -> webromain
 Naira Awadin -> NairaAwadin
+
+# TECHNOLOGIES UTILISÉES
+
+-Backend : PHP, MySQL
+-Fronted : HTML, CSS (Bootstrap), JS(pour la navbar)
+-Outils : Docker, Git
+
+# FONCTIONNALITÉS PRINCIPALES
+
+-Inscription et connexion => les utilisateurs peuvent créer un compte et se connecter
+
+-Galerie d'oeuvre d'art => Affichage des oeuvres avec leurs détails (titre, description, image, date de création)
+
+-Commentaires => les utilisateurs connectés peuvent laisser des commentaires sous les oeuvres
+
+-Favoris => les utilisateurs connectés peuvent ajouter des oeuvres à leurs favoris
+
+-Expositions => affichage des expositions associées aux oeuvres
+
+-Rôle administrateur => les admins peuvent bannir des utilisateurs
 
 # CONTRIBUTIONS
 
@@ -102,7 +127,7 @@ INSERT INTO exhibitions (artwork_id, name, location, start_date, end_date, descr
 
 -------------------------------------------------------------
 
-# php -S localhost:5500
+# php -S localhost:5500  #démarrer le serveur PHP
 
 -------------------------------------------------------------
 
@@ -120,9 +145,11 @@ sudo systemctl enable mariadb  #pour que mariadb démarre automatiquement
 mysql -u root -p  #pour se connecter à mariadb et acceder à app
 mdp = root
 
+CREATE DATABASE app;  #créer la base de données
+
 SHOW DATABASES;  #voir les bases de données dispos
 
-USE nom_bd; (ex: app)  # utiliser une base de données spécifique
+USE nom_bd; (ex: app)  #utiliser une base de données spécifique
 
 SHOW TABLES;  #afficher les tables de la bd
 

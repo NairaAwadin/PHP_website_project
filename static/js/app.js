@@ -4,7 +4,7 @@ let lastScrollTop = 0;
 
 function handleHeaderSwipe() {
     const scrollTop = document.documentElement.scrollTop;
-    
+
     if (scrollTop > lastScrollTop) {
         nav.style.top = "-90px";
     } else {
