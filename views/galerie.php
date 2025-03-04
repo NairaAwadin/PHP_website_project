@@ -1,19 +1,20 @@
 <?php
+session_start();
 require_once BASE_PATH . '/config/db.php';
 
 // Récupérer les œuvres d'art
+$artworks = [];
 try {
     $stmt = $pdo->query("SELECT * FROM artworks");
     $artworks = $stmt->fetchAll(PDO::FETCH_ASSOC);
 } catch (PDOException $e) {
     echo "Erreur : " . $e->getMessage();
-    $artworks = [];
 }
 
 // Récupérer les commentaires pour chaque œuvre d'art
 $comments = [];
 try {
-    $stmt = $pdo->query("SELECT * FROM comments");
+    $stmt = $pdo->query("SELECT comments.*, users.nom, users.prenom FROM comments JOIN users ON comments.user_id = users.id");
     $comments = $stmt->fetchAll(PDO::FETCH_ASSOC);
 } catch (PDOException $e) {
     echo "Erreur : " . $e->getMessage();
@@ -73,20 +74,35 @@ if (isset($_SESSION['user_id'])) {
                                 </ul>
                                 <p class="card-text"><strong>Commentaires :</strong></p>
                                 <ul>
+                                    <?php if (isset($_SESSION['user_id'])): ?>
+                                        <form method="post" action="../controllers/add_comments.php" class="mt-3">
+                                            <input type="hidden" name="artwork_id" value="<?= $artwork['id'] ?>">
+                                            <div class="form-group">
+                                                <textarea name="comment" class="form-control" placeholder="Ajouter un commentaire..." required></textarea>
+                                            </div>
+                                            <button type="submit" class="btn btn_effect">Poster</button>
+                                        </form>
+                                    <?php endif; ?>
+
+                                    <!-- Affiche les coms -->
                                     <?php
                                     $hasComments = false;
                                     foreach ($comments as $comment):
-                                        if ($comment['artwork_id'] == $artwork['id']):
+                                        if ($comment['artwork_id'] === $artwork['id']):
                                             $hasComments = true;
                                     ?>
-                                            <li><?= htmlspecialchars($comment['comment']) ?> (Posté le <?= htmlspecialchars($comment['created_at']) ?>)</li>
+                                            <li class="mt-2">
+                                                <strong><?= htmlspecialchars($comment['prenom'] . ' ' . $comment['nom']) ?></strong> :
+                                                <?= htmlspecialchars($comment['comment']) ?>
+                                                <small class="text-muted">(Posté le <?= htmlspecialchars($comment['created_at']) ?>)</small>
+                                            </li>
                                     <?php
                                         endif;
                                     endforeach;
-                                    if (!$hasComments) {
-                                        echo "<li>None</li>";
-                                    }
+                                    if (!$hasComments):
                                     ?>
+                                        <li class="text-muted">Aucun commentaire</li>
+                                    <?php endif; ?>
                                 </ul>
                                 <?php if (isset($_SESSION['user_id'])): ?>
                                     <?php if (in_array($artwork['id'], $favorites)): ?>
@@ -97,7 +113,7 @@ if (isset($_SESSION['user_id'])) {
                                     <?php else: ?>
                                         <form method="post" action="../controllers/add_favorite.php">
                                             <input type="hidden" name="artwork_id" value="<?= $artwork['id'] ?>">
-                                            <button type="submit" class="btn btn-primary">Ajouter aux favoris</button>
+                                            <button type="submit" class="btn btn_effect">Ajouter aux favoris</button>
                                         </form>
                                     <?php endif; ?>
                                 <?php endif; ?>

@@ -127,3 +127,5 @@ USE nom_bd; (ex: app)  # utiliser une base de données spécifique
 SHOW TABLES;  #afficher les tables de la bd
 
 DROP TABLE user;  #pour supprimer une table
+
+SELECT * FROM artworks;  #afficher les données d'une table spécifique
