@@ -10,11 +10,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST["user_id"])) {
         $user_id = intval($_POST["user_id"]);
 
-        // Inclure le fichier de configuration de la base de données
         require_once '../config/db.php';
 
         try {
-            // Préparer et exécuter la requête de suppression
             $stmt = $pdo->prepare("DELETE FROM users WHERE id = ?");
             $stmt->execute([$user_id]);
 

@@ -46,7 +46,6 @@
                             </div>
 
                             <div class="pt-1 mb-4">
-                                <!--<button type="reset" class="btn btn-secondary btn-lg btn-block">Effacer</button>-->
                                 <button type="submit" class="btn btn_effect">S'inscrire</button>
                             </div>
 

@@ -7,7 +7,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_SESSION['user_id'])) {
     $user_id = $_SESSION['user_id'];
 
     try {
-        // Supprimer le favori
         $stmt = $pdo->prepare("DELETE FROM favorites WHERE user_id = :user_id AND artwork_id = :artwork_id");
         $stmt->execute(['user_id' => $user_id, 'artwork_id' => $artwork_id]);
 

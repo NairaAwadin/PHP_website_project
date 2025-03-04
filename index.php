@@ -48,7 +48,6 @@ function galerie()
 }
 
 $action = $_SERVER['REQUEST_URI'];
-// var_dump($action);
 switch (substr(strtok($action, '?'), 1)) {
     case "":
         index();
