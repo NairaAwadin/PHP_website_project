@@ -6,5 +6,6 @@ function logout() {
     header('Location: /login');
     exit();
 }
+
 logout();
 ?>

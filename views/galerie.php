@@ -51,7 +51,6 @@ $favorites = isset($_SESSION['user_id']) ? get_user_favorites($pdo, $_SESSION['u
                                         </form>
                                     <?php endif; ?>
 
-                                    <!--affiche les coms-->
                                     <?php
                                     $hasComments = false;
                                     foreach ($comments as $comment):

@@ -10,7 +10,6 @@
             <a href="/" class="nav_item">Accueil</a>
             <a href="/galerie" class="nav_item">Galerie</a>
             <a href="/profil" class="nav_item">Profil</a>
-            <!--<a href="/register" class="btn btn-outline-light btn-sm rounded-pill px-3">Sign Up</a>-->
             <a href="/login" class="btn btn-light btn-sm rounded-pill px-3">Log In</a>
         </div>
     </div>

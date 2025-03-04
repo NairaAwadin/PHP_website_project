@@ -26,5 +26,6 @@ function handle_login($pdo)
         }
     }
 }
+
 handle_login($pdo);
 ?>
