@@ -9,6 +9,12 @@ if (!isset($_SESSION["user_id"])) {
 <main>
     <div class="container">
         <div class="main-body">
+            <?php if (isset($_SESSION["message"])): ?>
+                <div class="alert alert-info">
+                    <?= htmlspecialchars($_SESSION["message"]) ?>
+                </div>
+                <?php unset($_SESSION["message"]); ?>
+            <?php endif; ?>
             <div class="row gutters-sm">
                 <div class="col-md-4 mb-3">
                     <div class="card">
@@ -108,6 +114,30 @@ if (!isset($_SESSION["user_id"])) {
                                 </div>
                             </form>
                             <hr>
+                            <?php if ($_SESSION['user_id'] == 1): ?>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <h6 class="mb-0">Bannir un utilisateur</h6>
+                                    <form method="post" action="../controllers/ban_user.php">
+                                        <div class="row">
+                                            <div class="col-sm-3">
+                                                <label for="user_id">ID de l'utilisateur</label>
+                                            </div>
+                                            <div class="col-sm-9 text-secondary">
+                                                <input type="number" name="user_id" class="form-control" placeholder="Entrez l'ID de l'utilisateur" required>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <button type="submit" class="btn btn-danger">Bannir</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <hr>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>

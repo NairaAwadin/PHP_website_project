@@ -8,7 +8,7 @@ Naira Awadin -> NairaAwadin
 
 # CONTRIBUTIONS
 
-Romain Poisson : Base Projet, register, profil, galerie (artworks, expositions, favoris (quand connecté))
+Romain Poisson : Base Projet, register, profil, galerie (artworks, expositions, favoris (quand connecté)), gestion rôle (admin - bannir des utilisateurs)
 
 Naira Awadin : Login, home, css (bootstrap) site entier, galerie (commentaires)
 
