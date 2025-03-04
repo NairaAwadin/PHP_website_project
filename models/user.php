@@ -73,29 +73,4 @@ function updateUser(PDO $pdo, int $userId, array $newUserData): ?array
     }
 }
 
-/*function updateUser(PDO $pdo, int $userId, array $newUserData): ?array
-{
-    if (isset($newUserData['password'])) {
-        $newUserData['password'] = password_hash($newUserData['password'], PASSWORD_DEFAULT);
-    }
-
-    $sets = implode(
-        ', ',
-        array_map(fn ($key) => "{$key} = :{$key}", array_keys($newUserData))
-    );
-
-    $statement = $pdo->prepare("UPDATE users SET {$sets} WHERE id = :id");
-    $newUserData['id'] = $userId; // Ajout de l'id dans les paramètres
-    $statement->execute($newUserData);
-
-    if ($statement->rowCount()) {
-        $stmt = $pdo->prepare("SELECT * FROM users WHERE id = :id");
-        $stmt->execute(['id' => $userId]);
-        return $stmt->fetch();
-    }
-
-    return null;
-}
-*/
-
 ?>

@@ -1,4 +1,4 @@
-<nav class="navbar p-2" style="background-color: #1A1A1A; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+<nav id="navbar" class="navbar p-2" style="position: fixed; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
     <div class="container-fluid d-flex align-items-center justify-content-between">
 
         <div class="d-flex align-items-center">
