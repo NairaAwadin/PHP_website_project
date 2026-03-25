@@ -1,7 +1,5 @@
 <?php
-session_start();
-
-require_once '../models/user.php';
+require_once BASE_PATH . '/models/user.php';
 
 function handle_register($pdo)
 {

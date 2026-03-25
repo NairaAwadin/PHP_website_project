@@ -21,15 +21,15 @@
                                 <label class="form-label">Genre<span class="text-danger">*</span></label>
                                 <div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" value="1" name="sexe" id="homme" required />
+                                        <input class="form-check-input" type="radio" value="H" name="sexe" id="homme" required />
                                         <label class="form-check-label" for="homme">Homme</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" value="2" name="sexe" id="femme" required />
+                                        <input class="form-check-input" type="radio" value="F" name="sexe" id="femme" required />
                                         <label class="form-check-label" for="femme">Femme</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" value="3" name="sexe" id="autre" required />
+                                        <input class="form-check-input" type="radio" value="A" name="sexe" id="autre" required />
                                         <label class="form-check-label" for="autre">Autre</label>
                                     </div>
                                 </div>

@@ -5,7 +5,7 @@
 
                 <div class="col-sm-6 d-flex align-items-center justify-content-center">
                     <div class="px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5" style="width: 23rem;">
-                        <form method="POST" action="../controllers/login.php">
+                        <form method="POST">
                             <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Connexion</h3>
 
                             <div class="form-outline mb-4">

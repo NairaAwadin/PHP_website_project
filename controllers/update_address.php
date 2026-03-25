@@ -1,6 +1,5 @@
 <?php
-session_start();
-require_once '../config/db.php';
+require_once BASE_PATH . '/config/db.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $address = $_POST['address'];

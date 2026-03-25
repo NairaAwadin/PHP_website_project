@@ -1,5 +1,4 @@
 <?php
-session_start();
 require_once BASE_PATH . '/config/db.php';
 require_once BASE_PATH . '/models/galerie.php';
 

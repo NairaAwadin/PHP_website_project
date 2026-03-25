@@ -24,9 +24,15 @@ function register()
 function login()
 {
     $pageTitle = "Login";
-    require_once BASE_PATH . "/layouts/head.php";
-    require_once BASE_PATH . "/layouts/header.php";
-    require_once BASE_PATH . "/views/login.php";
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        require_once BASE_PATH . "/controllers/login.php";
+    }
+    else{
+        require_once BASE_PATH . "/layouts/head.php";
+        require_once BASE_PATH . "/layouts/header.php";
+        require_once BASE_PATH . "/views/login.php";
+    }
 }
 
 function profil()

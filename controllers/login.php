@@ -1,6 +1,5 @@
 <?php
-session_start();
-require_once "../models/user.php";
+require_once BASE_PATH . "/models/user.php";
 
 function handle_login($pdo)
 {
@@ -8,7 +7,7 @@ function handle_login($pdo)
         $email = $_POST["email"];
         $password = $_POST["password"];
 
-        $user = login($pdo, ["email" => $email]);
+        $user = getUserByEmail($pdo, ["email" => $email]);
 
         if ($user && password_verify($password, $user["password"])) {
             $_SESSION["user_id"] = $user["id"];

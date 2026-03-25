@@ -1,8 +1,11 @@
 <?php
 try {
-    $pdo = new PDO("mysql:host=127.0.0.1;dbname=app;charset=utf8mb4", 'root', 'root');
+    // Connexion à SQLite
+    $pdo = new PDO("sqlite:./dbvangogh.db");
+    // Configuration des options PDO
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 } catch (PDOException $e) {
-    die('Connection failed: ' . $e->getMessage());
+    die("Erreur de connexion : " . $e->getMessage());
 }
 ?>

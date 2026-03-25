@@ -1,6 +1,5 @@
 <?php
-session_start();
-require_once '../config/db.php';
+require_once BASE_PATH . '/config/db.php';
 
 function add_comment(PDO $pdo, int $user_id, int $artwork_id, string $comment): void
 {

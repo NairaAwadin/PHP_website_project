@@ -1,7 +1,7 @@
 <?php
-require_once '../config/db.php';
+require_once BASE_PATH . '/config/db.php';
 
-function login(PDO $pdo, array $credentials): array|false
+function getUserByEmail(PDO $pdo, array $credentials): array|false
 {
 
     $statement = $pdo->prepare("SELECT * FROM users WHERE email = :email");

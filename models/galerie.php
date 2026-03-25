@@ -1,7 +1,6 @@
 <?php
-require_once BASE_PATH . '/config/db.php';
 
-function get_artworks($pdo)
+function get_artworks(\Pdo $pdo)
 {
     try {
         $stmt = $pdo->query("SELECT * FROM artworks");

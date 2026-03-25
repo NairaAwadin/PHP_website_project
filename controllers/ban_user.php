@@ -1,6 +1,4 @@
 <?php
-session_start();
-
 if (!isset($_SESSION["user_id"]) || $_SESSION["user_id"] != 1) {
     header("Location: /login");
     exit();
@@ -10,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST["user_id"])) {
         $user_id = intval($_POST["user_id"]);
 
-        require_once '../config/db.php';
+        require_once BASE_PATH . '/config/db.php';
 
         try {
             $stmt = $pdo->prepare("DELETE FROM users WHERE id = ?");
